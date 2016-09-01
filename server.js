@@ -6,6 +6,7 @@ var app = express();
 
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
+var http = require('http');
 
 var connectionString = mongoose.connect(process.env.MONGOLAB_URI || 'mongodb://127.0.0.1:27017/test');
 
