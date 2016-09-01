@@ -26,6 +26,8 @@ console.log("server.js running");
 
 require("./public/server/app.js")(app,mongoose,db);
 
+var server = http.createServer(app);
+
 app.listen(port, function() {
 console.log("Listening on " + port);
 });
