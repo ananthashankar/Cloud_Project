@@ -12,7 +12,7 @@ var connectionString = mongoose.connect(process.env.MONGODB_URI || 'mongodb://12
 
 var db = mongoose.connection;
 //var fs = require('fs');
-app.use(express.static(__dirname + '/public'));
+app.use(express.static(__dirname + '/public/client'));
 
 //var ipaddress = process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1';
 //var port = process.env.PORT || 3000;
