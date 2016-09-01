@@ -1,5 +1,5 @@
 {
-  "name": "cloud_project",
+  "name": "pennbook-webapp",
   "version": "1.0.0",
   "description": "A Social Networking Web Application",
   "main": "index.js",
@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ananthashankar/Cloud_Project.git"
+    "url": "git+https://github.com/ananthashankar/pennbook-webapp.git"
   },
   "author": "Anantha Shankar Arun Kumar",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ananthashankar/Cloud_Project/issues"
+    "url": "https://github.com/ananthashankar/pennbook-webapp/issues"
   },
-  "homepage": "https://github.com/ananthashankar/Cloud_Project#readme",
+  "homepage": "https://github.com/ananthashankar/pennbook-webapp#readme",
   "dependencies": {
     "express": "^4.13.4",
     "guid": "0.0.12",
