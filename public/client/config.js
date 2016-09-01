@@ -62,6 +62,9 @@
                 templateUrl: "views/guestUser/guestuser.view.html",
                 controller: "GuestUserController"
             })
+            .when("/",{
+                redirectTo: "/login"
+            })
             .otherwise({
                 redirectTo: "/login"
             });

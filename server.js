@@ -6,19 +6,16 @@ var app = express();
 
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
-var http = require('http');
+//var http = require('http');
 
-var connectionString = mongoose.connect(process.env.MONGOLAB_URI || 'mongodb://127.0.0.1:27017/test');
+var connectionString = mongoose.connect(process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/test');
 
 var db = mongoose.connection;
 //var fs = require('fs');
 app.use(express.static(__dirname + '/public'));
 
 //var ipaddress = process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1';
-var port = process.env.PORT || 3000;
-
-//app.use(bodyParser.json());
-//app.use(bodyParser.urlencoded({extended: true}));
+//var port = process.env.PORT || 3000;
 
 app.use(bodyParser.json({limit: '50mb'}));
 app.use(bodyParser.urlencoded({limit: '50mb', extended: true}));
@@ -27,8 +24,10 @@ console.log("server.js running");
 
 require("./public/server/app.js")(app,mongoose,db);
 
-var server = http.createServer(app);
+// starting link http://localhost:3000/client//index.html
 
-app.listen(port, function() {
-console.log("Listening on " + port);
+// Initialize the app.
+var server = app.listen(process.env.PORT || 3000, function () {
+    var port = server.address().port;
+    console.log("App now running on port", port);
 });
